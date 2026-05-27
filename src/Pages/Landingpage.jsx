@@ -6,6 +6,16 @@ import roomimg from "../assets/roomimg.png";
 import sketch from "../assets/sketch.png";
 import luxury from "../assets/lux.png";
 import bluetable from "../assets/bluetable.png";
+import explore from "../assets/explore.png";
+import { FaXTwitter } from "react-icons/fa6";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa";
+
+
+
+
 
 import { motion } from "framer-motion";
 import { stats } from "../assets/assets";
@@ -56,8 +66,8 @@ const Landingpage = () => {
 
           <div className="flex gap-24">
             <div className="leading-5">
-              <p>Designed</p>
-              <p>by Dmitrij Mišnik</p>
+              {/* <p>Designed</p>
+              <p>by Dmitrij Mišnik</p> */}
             </div>
 
             <div>
@@ -573,136 +583,462 @@ const Landingpage = () => {
 
     {/* grey section ....................................................*/}
 
-     <section className="w-full bg-[#242628] text-white font-['Inter'] px-6 md:px-10 lg:px-16 py-16 md:py-20 overflow-hidden">
+    <section className="w-full bg-[#242628] text-white font-['Inter'] px-4 sm:px-6 md:px-10 lg:px-16 py-12 md:py-20 overflow-hidden">
 
-      {/* Top Area */}
-      <div className="flex flex-col lg:flex-row justify-between gap-16 mb-24">
+  {/* Top Area */}
+  <div className="flex flex-col lg:flex-row justify-between gap-10 md:gap-16 mb-14 md:mb-24">
 
-        {/* Left Side */}
-        <div className="flex-1">
+    {/* Left Side */}
+    <div className="flex-1">
 
-          {/* Small Label */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 1,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            viewport={{ once: true }}
-            className="flex items-center gap-2 mb-10 text-[15px]"
-          >
-            <span className="text-[8px]">◆</span>
-            <p>About Velora</p>
-          </motion.div>
+      {/* Small Label */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 1,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        viewport={{ once: true }}
+        className="
+          flex
+          items-center
+          gap-2
+          mb-6
+          md:mb-10
+          text-[12px]
+          md:text-[15px]
+        "
+      >
+        <span className="text-[6px] md:text-[8px]">◆</span>
+        <p>About Velora</p>
+      </motion.div>
 
-          {/* Main Heading */}
-          <motion.h2
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 1.2,
-              delay: 0.2,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            viewport={{ once: true }}
-            className="
-              text-[42px]
-              md:text-[56px]
-              lg:text-[64px]
-              leading-[1.1]
-              tracking-[-0.03em]
-              max-w-[900px]
-              font-light
-            "
-          >
-            Velora is an{" "}
-            <span className="italic font-semibold">
-              interior design studio
-            </span>{" "}
-            focused on creating calm, sophisticated spaces for modern living.
-          </motion.h2>
-        </div>
+      {/* Main Heading */}
+      <motion.h2
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 1.2,
+          delay: 0.2,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        viewport={{ once: true }}
+        className="
+          text-[24px]
+          sm:text-[32px]
+          md:text-[56px]
+          lg:text-[64px]
+          leading-[1.05]
+          tracking-[-0.03em]
+          max-w-[900px]
+          font-light
+        "
+      >
+        Velora is an{" "}
+        <span className="italic font-semibold">
+          interior design studio
+        </span>{" "}
+        focused on creating calm,
+        sophisticated spaces
+        for modern living.
+      </motion.h2>
+    </div>
 
-        {/* Right Text */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{
-            duration: 1.2,
-            delay: 0.4,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-          viewport={{ once: true }}
+    {/* Right Text */}
+    <motion.div
+      initial={{ opacity: 0, x: 40 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{
+        duration: 1.2,
+        delay: 0.4,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      viewport={{ once: true }}
+      className="
+        hidden
+        lg:block
+        lg:w-[420px]
+        text-[16px]
+        leading-[1.7]
+        text-[#d7d7d7]
+        pt-4
+      "
+    >
+      <p>
+        Inspired by Milan’s architectural clarity and timeless elegance,
+        we combine natural materials, soft tones, and thoughtful
+        composition to design interiors that feel effortless and refined.
+      </p>
+    </motion.div>
+
+  </div>
+
+  {/* Stats */}
+  <div className="grid grid-cols-2 lg:grid-cols-4 border-t border-white/10 lg:border-none">
+
+    {stats.map((item, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 1,
+          delay: index * 0.15,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        viewport={{ once: true }}
+        className="
+          border-white/10
+          border-b
+          border-r
+          lg:border-l
+          lg:border-b-0
+          lg:border-r-0
+          p-4
+          md:p-8
+          min-h-[180px]
+          md:min-h-[220px]
+          flex
+          flex-col
+          justify-between
+        "
+      >
+
+        {/* Top Label */}
+        <p className="text-[13px] md:text-[18px] text-[#d7d7d7]">
+          {item.title}
+        </p>
+
+        {/* Main Value */}
+        <h3
           className="
-            lg:w-[420px]
-            text-[16px]
-            leading-[1.7]
-            text-[#d7d7d7]
-            pt-4
+            text-[52px]
+            sm:text-[64px]
+            md:text-[88px]
+            leading-none
+            tracking-[-0.04em]
+            font-light
           "
         >
-          <p>
-            Inspired by Milan’s architectural clarity and timeless elegance,
-            we combine natural materials, soft tones, and thoughtful
-            composition to design interiors that feel effortless and refined.
-          </p>
-        </motion.div>
-      </div>
+          {item.value}
+        </h3>
 
-      {/* Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        {/* Bottom Description */}
+        <p className="text-[13px] md:text-[18px] text-[#8f8f8f] leading-[1.4]">
+          {item.description}
+        </p>
 
-        {stats.map((item, index) => (
+      </motion.div>
+    ))}
+
+  </div>
+
+</section>
+
+{/* Explore section-------------------------------------------------------------------------- */}
+
+   <section className="w-full h-screen overflow-hidden font-['Inter'] relative bg-black">
+      
+      {/* Background Image */}
+      <motion.div
+        initial={{ scale: 1.1, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${explore})`,
+        }}
+      />
+
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/55"></div>
+
+      {/* Main Content */}
+      <div className="relative z-10 h-full flex flex-col justify-between px-8 md:px-14 lg:px-16 py-10">
+        
+        {/* Top Content */}
+        <div className="flex justify-between items-start w-full">
+          
+          {/* Heading */}
           <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 70 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 1,
-              delay: index * 0.15,
+              delay: 0.3,
               ease: [0.22, 1, 0.36, 1],
             }}
-            viewport={{ once: true }}
-            className="
-              border-l
-              border-white/30
-              pl-8
-              min-h-[220px]
-              flex
-              flex-col
-              justify-between
-            "
+            className="max-w-[720px] mt-8"
           >
-
-            {/* Top Label */}
-            <p className="text-[18px] text-[#d7d7d7]">
-              {item.title}
-            </p>
-
-            {/* Main Value */}
-            <h3
-              className="
-                text-[72px]
-                md:text-[88px]
-                leading-none
-                tracking-[-0.04em]
-                font-light
-              "
-            >
-              {item.value}
-            </h3>
-
-            {/* Bottom Description */}
-            <p className="text-[18px] text-[#8f8f8f]">
-              {item.description}
-            </p>
-
+            <h1 className="text-white text-[26px] md:text-[42px] leading-[1.15] font-light tracking-[-0.02em]">
+              <span className="mr-2">♦ </span>
+              A space should feel as good as it looks.
+              <br />
+              Let’s create something{" "}
+              <span className="italic font-extralight text-white/80">
+                timeless together.
+              </span>
+            </h1>
           </motion.div>
-        ))}
 
+          {/* Button */}
+          <motion.div
+            initial={{ opacity: 0, x: 80 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 1,
+              delay: 0.7,
+              ease: "easeOut",
+            }}
+            className="mt-10 hidden md:block"
+          >
+            <button className="group border border-white/60 w-[310px] h-[60px] text-white flex items-center justify-center gap-8 hover:bg-white hover:text-black transition-all duration-500">
+              
+              <span className="text-[15px] tracking-wide">
+                Explore Velora
+              </span>
+
+              <span className="text-xl transition-transform duration-500 group-hover:translate-x-2">
+                →
+              </span>
+            </button>
+          </motion.div>
+        </div>
+
+        {/* Bottom Content */}
+        <div className="w-full">
+          
+          {/* Bottom Left Text */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 1,
+              delay: 1,
+              ease: "easeOut",
+            }}
+            className="mb-10"
+          >
+            <p className="text-white/80 text-[15px] leading-[1.2] font-light max-w-[180px]">
+              Quiet luxury,
+              <br />
+              shaped by detail.
+              <br />
+              Inspired by Milan.
+              <br />
+              Designed for you.
+            </p>
+          </motion.div>
+
+          {/* Bottom Line */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{
+              duration: 1.2,
+              delay: 1.2,
+              ease: "easeInOut",
+            }}
+            className="w-full h-[1px] bg-white/20 origin-left"
+          />
+        </div>
       </div>
     </section>
+
+    {/* SECTION....................................................................... */}
+    <section className="w-full bg-[#242628] text-white font-['Inter'] px-5 sm:px-8 md:px-10 lg:px-14 pt-10 md:pt-14 pb-5 overflow-hidden">
+
+  {/* Top Content */}
+  <div className="flex flex-col lg:flex-row justify-between gap-14 md:gap-20 mb-16 md:mb-24">
+
+    {/* Left Side */}
+    <motion.div
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="max-w-[620px]"
+    >
+      <h2 className="text-[28px] sm:text-[34px] md:text-[42px] lg:text-[48px] leading-[1.08] font-light tracking-[-0.03em] text-white">
+        Creating refined interiors
+        <br />
+        inspired by Italian aesthetics,
+        <br />
+        where every detail feels
+        <br />
+        intentional and timeless.
+      </h2>
+
+      {/* Button */}
+      <motion.button
+        whileHover={{ scale: 1.03 }}
+        whileTap={{ scale: 0.98 }}
+        className="group mt-8 bg-[#F2F2F2] text-black w-[240px] sm:w-[270px] h-[54px] flex items-center justify-center gap-5 hover:bg-white transition-all duration-500"
+      >
+        <span className="text-[13px] sm:text-[14px] tracking-wide">
+          Book a Consultation
+        </span>
+
+        <FaArrowRight
+          size={16}
+          className="transition-transform duration-500 group-hover:translate-x-2"
+        />
+      </motion.button>
+    </motion.div>
+
+    {/* Right Side */}
+    <motion.div
+      initial={{ opacity: 0, x: 80 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+      className="flex flex-col w-full max-w-[520px]"
+    >
+
+      {/* Columns */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8">
+
+        {/* Menu */}
+        <div>
+          <p className="text-white/30 text-xs uppercase tracking-[0.15em] mb-5">
+            Menu
+          </p>
+
+          <ul className="space-y-2 text-[15px] sm:text-[16px] font-light">
+            {["Home", "About", "Services", "Portfolio", "Testimonials"].map(
+              (item, index) => (
+                <motion.li
+                  key={item}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.08,
+                  }}
+                  className="hover:text-white/70 cursor-pointer transition"
+                >
+                  {item}
+                </motion.li>
+              )
+            )}
+          </ul>
+        </div>
+
+        {/* Studio */}
+        <div>
+          <p className="text-white/30 text-xs uppercase tracking-[0.15em] mb-5">
+            Studio
+          </p>
+
+          <div className="space-y-2 text-[15px] sm:text-[16px] font-light leading-[1.5]">
+            <p>Milan, Italy</p>
+            <p>(Available worldwide)</p>
+          </div>
+        </div>
+
+        {/* Contact */}
+        <div>
+          <p className="text-white/30 text-xs uppercase tracking-[0.15em] mb-5">
+            Contact
+          </p>
+
+          <div className="space-y-2 text-[15px] sm:text-[16px] font-light leading-[1.5] break-words">
+            <p>hello@velora.studio</p>
+            <p>+39 02 1234 5678</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Divider */}
+      <motion.div
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.2 }}
+        className="w-full h-[1px] bg-white/10 my-10 origin-left"
+      />
+
+      {/* Studio Name + Socials */}
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+
+        <motion.h3
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-[28px] sm:text-[36px] md:text-[42px] font-light tracking-[-0.03em]"
+        >
+          Interior Design Studio
+        </motion.h3>
+
+        {/* Social Icons */}
+        <div className="flex items-center gap-2">
+
+          {[
+            <FaXTwitter size={15} />,
+            <AiFillInstagram size={15} />,
+            <FaFacebookSquare size={15} />,
+            <FaYoutube size={15} />,
+          ].map((icon, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.7 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.4,
+                delay: index * 0.1,
+              }}
+              whileHover={{
+                y: -3,
+              }}
+              className="w-10 h-10 bg-white/10 hover:bg-white hover:text-black transition-all duration-300 flex items-center justify-center cursor-pointer"
+            >
+              {icon}
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  </div>
+
+  {/* Huge Brand Text */}
+  <motion.div
+    initial={{ opacity: 0, y: 100 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 1.2, ease: "easeOut" }}
+    className="w-full overflow-hidden leading-none"
+  >
+    <h1 className="text-[70px] sm:text-[110px] md:text-[160px] lg:text-[240px] xl:text-[300px] font-normal tracking-[-0.05em] text-[#ECECEC]">
+      VELORA
+    </h1>
+  </motion.div>
+
+  {/* Bottom Footer */}
+  <motion.div
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 1, delay: 0.3 }}
+    className="border-t border-white/10 pt-4 mt-3 flex flex-col sm:flex-row justify-between items-center gap-4 text-white/60 text-xs sm:text-sm"
+  >
+    <p>© 2026 Velora. All rights reserved</p>
+
+    <div className="flex items-center gap-5">
+      <p className="hover:text-white transition cursor-pointer">
+        Privacy Policy
+      </p>
+
+      <p className="hover:text-white transition cursor-pointer">
+        Terms of Use
+      </p>
+    </div>
+  </motion.div>
+</section>
+    
     </>
   );
 };
