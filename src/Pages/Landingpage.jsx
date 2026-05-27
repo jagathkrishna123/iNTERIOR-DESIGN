@@ -30,7 +30,7 @@ const Landingpage = () => {
       <section className="relative w-full h-[100dvh] overflow-hidden bg-black font-inter">
         {/* Background Image */}
         <img
-          src={bgimage}
+          src={bgimage2}
           alt="Interior"
           className="absolute inset-0 w-full h-full object-cover"
         />
