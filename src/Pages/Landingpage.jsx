@@ -116,7 +116,7 @@ const Landingpage = () => {
 
           {/* Mobile Text (Stacked) */}
           <h1 className="md:hidden mt-[-15%] flex flex-col items-center text-white font-pop uppercase font-semibold -tracking-tighter leading-[0.85] text-[40vw] text-center w-full">
-            <span className="mr-4">VEL</span>
+            <span className="mr-4">VÉL</span>
             <span className="ml-4">ORA</span>
           </h1>
         </motion.div>
@@ -188,7 +188,7 @@ const Landingpage = () => {
 
               {/* Big Heading */}
               <div className="mt-10">
-                <h2 className="max-w-[320px] md:max-w-[420px] text-[42px] md:text-[56px] leading-[1] font-light text-[#111]">
+                <h2 className="max-w-[320px] md:max-w-[420px] text-[37px] md:text-[56px] leading-[1] font-light text-[#111]">
                   Designed for modern living.
                 </h2>
 
@@ -212,7 +212,7 @@ const Landingpage = () => {
             {/* RIGHT SIDE */}
             <div className="flex-1">
               {/* MOBILE SCROLL */}
-              <div className="flex gap-5 overflow-x-auto lg:hidden pb-4 snap-x snap-mandatory no-scrollbar">
+              <div className="flex gap-5 overflow-x-auto lg:hidden pb-4 snap-x snap-mandatory no-scrollbar py-2">
                 {cards.map((card, index) => (
                   <motion.div
                     key={card.id}
@@ -226,21 +226,21 @@ const Landingpage = () => {
                     bg-white/70
                     backdrop-blur-xl
                     border border-[#d6d6d6]
-                    rounded-[28px]
-                    p-5
+                    rounded-[20px]
+                    px-5 py-3
                     snap-center
                     shadow-[0_10px_40px_rgba(0,0,0,0.05)]
                   "
                   >
                     {/* Header */}
-                    <div className="flex items-center justify-between mb-5">
-                      <h3 className="text-[28px] font-light text-[#111]">
+                    <div className="flex items-center justify-between mb-3">
+                      <h3 className=" text-[18px] font-light text-[#111]">
                         {card.title}
                       </h3>
 
                       <div className="flex items-center gap-2 text-[#999]">
                         <div className="w-2 h-2 bg-[#999] rotate-45" />
-                        <span className="text-[22px]">{card.id}</span>
+                        <span className="md:text-[22px] text-[16px]">{card.id}</span>
                       </div>
                     </div>
 
@@ -256,7 +256,7 @@ const Landingpage = () => {
                     </div>
 
                     {/* Text */}
-                    <p className="mt-5 text-[14px] leading-[1.9] text-[#444]">
+                    <p className="mt-5 text-[10px] md:text-[14px] leading-[1.9] text-[#444]">
                       {card.text}
                     </p>
                   </motion.div>
@@ -293,7 +293,7 @@ const Landingpage = () => {
 
                     {/* Header */}
                     <div className="relative flex items-center justify-between border-b border-[#dcdcdc] pb-4 mb-6">
-                      <h2 className="text-[32px] text-[#111] font-light">
+                      <h2 className="text-[28px] text-[#111] font-light">
                         {card.title}
                       </h2>
 
