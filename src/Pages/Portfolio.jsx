@@ -85,7 +85,7 @@ const Portfolio = () => {
         </motion.div>
         
         {/* V Logo */}
-        <motion.div 
+        {/* <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.5 }}
@@ -93,7 +93,7 @@ const Portfolio = () => {
           className="md:col-span-1 lg:col-span-2 flex justify-end mt-10 md:mt-20 hidden md:flex"
         >
           <div className="text-3xl font-serif font-bold text-white italic">v</div>
-        </motion.div>
+        </motion.div> */}
       </div>
 
       {/* Gallery Controls */}

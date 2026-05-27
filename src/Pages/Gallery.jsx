@@ -1,6 +1,6 @@
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useScroll } from "framer-motion";
 
 import gallerimg1 from "../assets/gallerimg1.png";
 import gallerimg2 from "../assets/gallerimg2.png";
@@ -56,6 +56,9 @@ const services = [
 ];
 
 const Gallery = () => {
+  const mobileScrollRef = useRef(null);
+  const { scrollXProgress } = useScroll({ container: mobileScrollRef });
+
   return (
     <section className="w-full bg-[#f8f8f8] font-inter px-4 md:px-10 lg:px-16 py-10 md:py-16 overflow-hidden">
 
@@ -102,9 +105,13 @@ const Gallery = () => {
       </div>
 
       {/* MOBILE LAYOUT */}
-      <div className="md:hidden overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-4 px-4" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}>
+      <div 
+        ref={mobileScrollRef}
+        className="md:hidden overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-4 px-4 scroll-smooth" 
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}
+      >
 
-        <div className="flex gap-5 pb-4">
+        <div className="flex gap-5 pb-4 items-stretch">
 
           {services.map((service, index) => (
             <motion.div
@@ -113,11 +120,11 @@ const Gallery = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true, amount: 0.3 }}
-              className="w-[85vw] flex-shrink-0 snap-center"
+              className="w-[85vw] flex-shrink-0 snap-center flex flex-col"
             >
 
               {/* Image */}
-              <div className="w-full h-[400px] overflow-hidden mb-5">
+              <div className="w-full h-[400px] overflow-hidden mb-5 flex-shrink-0">
                 <img
                   src={service.image}
                   alt={service.title}
@@ -126,27 +133,31 @@ const Gallery = () => {
               </div>
 
               {/* Content */}
-              <div>
+              <div className="flex flex-col flex-grow justify-between">
 
-                <h3 className="text-[20px] text-[#222] mb-2 leading-none">
-                  {service.title}
-                </h3>
+                <div>
+                  <h3 className="text-[20px] text-[#222] mb-2 leading-none font-medium">
+                    {service.title}
+                  </h3>
 
-                <p className="text-[12px] text-[#6d6d6d] leading-[1.5] mb-6 max-w-[280px]">
-                  {service.description}
-                </p>
-
-                {/* Button */}
-                <button className="border border-[#bfbfbf] px-5 py-3 text-[11px] text-[#222] flex items-center justify-between w-full hover:bg-black hover:text-white transition-all duration-300">
-                  Learn Service
-                  <span>→</span>
-                </button>
-
-                {/* Counter */}
-                <div className="flex justify-end mt-5">
-                  <p className="text-[12px] text-[#6d6d6d]">
-                    {index + 1}/5
+                  <p className="text-[12px] text-[#6d6d6d] leading-[1.5] mb-6 max-w-[280px]">
+                    {service.description}
                   </p>
+                </div>
+
+                <div>
+                  {/* Button */}
+                  <button className="border border-[#bfbfbf] px-5 py-3 text-[11px] text-[#222] flex items-center justify-between w-full hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">
+                    Learn Service
+                    <span>→</span>
+                  </button>
+
+                  {/* Counter */}
+                  <div className="flex justify-end mt-5">
+                    <p className="text-[12px] text-[#6d6d6d]">
+                      {index + 1}/5
+                    </p>
+                  </div>
                 </div>
 
               </div>
@@ -154,6 +165,16 @@ const Gallery = () => {
             </motion.div>
           ))}
 
+        </div>
+      </div>
+
+      {/* Progress Bar (Mobile only) */}
+      <div className="md:hidden flex justify-center mt-6">
+        <div className="w-24 h-[2px] bg-[#e0e0e0] relative overflow-hidden rounded-full">
+          <motion.div 
+            className="absolute top-0 left-0 h-full bg-[#222]" 
+            style={{ scaleX: scrollXProgress, transformOrigin: "left" }} 
+          />
         </div>
       </div>
 
@@ -272,9 +293,7 @@ const Gallery = () => {
       {/* Bottom Logo */}
       <div className="flex justify-end mt-16 md:mt-20">
 
-        <p className="text-[24px] md:text-[28px] text-[#222] font-semibold">
-          V
-        </p>
+       
 
       </div>
 
