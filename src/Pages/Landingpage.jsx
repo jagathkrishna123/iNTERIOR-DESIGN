@@ -3,8 +3,6 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import bgimage from "../assets/bgimage.png";
 import bgimage2 from "../assets/bgimage2.png";
 import tableimg from "../assets/table2.png";
-import roomimg from "../assets/roomimg.png";
-import sketch from "../assets/sketch.png";
 import luxury from "../assets/lux.png";
 import bluetable from "../assets/bluetable.png";
 import explore from "../assets/explore.png";
@@ -20,7 +18,7 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 
 import { motion } from "framer-motion";
-import { stats } from "../assets/assets";
+import { cards, stats } from "../assets/assets";
 
 const Landingpage = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -166,93 +164,178 @@ const Landingpage = () => {
 
       {/* ABOUT SECTION -------------------------------------------------------*/}
 
-      <section className="w-full bg-[#ebebeb] font-['Inter'] py-16 px-6 md:px-10 lg:px-16">
-        <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-10">
-          {/* Left Content */}
-          <div className="lg:w-[20%] flex flex-col justify-between">
-            {/* Small Title */}
-            <div className="flex items-center gap-2 text-[#222] text-[14px] font-medium">
-              <span className="text-[8px]">◆</span>
-              <p>About project</p>
+      <section className="relative w-full overflow-hidden bg-[#bababa] font-['Inter'] py-20">
+      {/* Background Blur Shape */}
+      <div className="absolute top-[-120px] right-[-100px] w-[350px] h-[350px] bg-[#d9d9d9] rounded-full blur-[120px] opacity-60" />
+
+      <div className="max-w-[1450px] mx-auto px-6 md:px-10 lg:px-16 relative z-10">
+        <div className="flex flex-col lg:flex-row gap-14">
+          {/* LEFT SIDE */}
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="lg:w-[24%] flex flex-col justify-between"
+          >
+            {/* Small Label */}
+            <div className="flex items-center gap-3 text-[#222]">
+              <div className="w-2 h-2 bg-black rotate-45" />
+              <p className="uppercase tracking-[0.25em] text-[12px] font-medium">
+                About Project
+              </p>
             </div>
 
-            {/* Description */}
-            <div className="max-w-[200px] text-[#222] text-[14px] leading-[1.7]">
-              <p>
+            {/* Big Heading */}
+            <div className="mt-10">
+              <h2 className="text-[42px] md:text-[56px] leading-[1] font-light text-[#111]">
+                Designed
+                <br />
+                for modern
+                <br />
+                living.
+              </h2>
+
+              <p className="mt-8 text-[15px] leading-[1.9] text-[#444] max-w-[280px]">
                 <span className="font-semibold">Velora</span> is a conceptual
                 landing page for an{" "}
-                <span className="font-semibold italic">
+                <span className="italic font-medium">
                   interior design studio
                 </span>{" "}
-                inspired by the aesthetics of Milan and the philosophy of{" "}
-                <span className="font-semibold italic">quiet luxury.</span>
-              </p>
-            </div>
-          </div>
-
-          {/* Cards */}
-          <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Card 1 */}
-            <div className="border border-[#b9b9b9] p-6 bg-transparent">
-              {/* Header */}
-              <div className="flex items-center justify-between border-b border-[#d2d2d2] pb-3 mb-6">
-                <h2 className="text-[24px] text-[#222] font-normal">Task</h2>
-
-                <div className="flex items-center gap-2 text-[#b2b2b2]">
-                  <span className="text-[8px]">◆</span>
-                  <span className="text-[24px]">01</span>
-                </div>
-              </div>
-
-              {/* Image */}
-              <div className="relative w-full h-[320px] overflow-hidden mb-5">
-                <img
-                  src={sketch}
-                  alt="Task"
-                  className="w-full h-full object-cover scale-[1.5]"
-                />
-                <div className="absolute inset-0 bg-black/10"></div>
-              </div>
-
-              {/* Text */}
-              <p className="text-[15px] leading-[1.8] text-[#222]">
-                The goal of the project was to design a modern, high-end landing
-                page that communicates elegance, clarity, and professionalism.
+                inspired by Milan aesthetics and the philosophy of{" "}
+                <span className="italic font-medium">quiet luxury.</span>
               </p>
             </div>
 
-            {/* Card 2 */}
-            <div className="border border-[#b9b9b9] p-6 bg-transparent">
-              {/* Header */}
-              <div className="flex items-center justify-between border-b border-[#d2d2d2] pb-3 mb-6">
-                <h2 className="text-[24px] text-[#222] font-normal">
-                  Solution
-                </h2>
+            {/* Decorative Line */}
+            <div className="hidden lg:block mt-10">
+              <div className="w-[120px] h-[1px] bg-[#bdbdbd]" />
+            </div>
+          </motion.div>
 
-                <div className="flex items-center gap-2 text-[#b2b2b2]">
-                  <span className="text-[8px]">◆</span>
-                  <span className="text-[24px]">02</span>
-                </div>
-              </div>
+          {/* RIGHT SIDE */}
+          <div className="flex-1">
+            {/* MOBILE SCROLL */}
+            <div className="flex gap-5 overflow-x-auto lg:hidden pb-4 snap-x snap-mandatory no-scrollbar">
+              {cards.map((card, index) => (
+                <motion.div
+                  key={card.id}
+                  initial={{ opacity: 0, x: 80 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.15, duration: 0.7 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -8 }}
+                  className="
+                    min-w-[88%]
+                    bg-white/70
+                    backdrop-blur-xl
+                    border border-[#d6d6d6]
+                    rounded-[28px]
+                    p-5
+                    snap-center
+                    shadow-[0_10px_40px_rgba(0,0,0,0.05)]
+                  "
+                >
+                  {/* Header */}
+                  <div className="flex items-center justify-between mb-5">
+                    <h3 className="text-[28px] font-light text-[#111]">
+                      {card.title}
+                    </h3>
 
-              {/* Image */}
-              <div className="w-full h-[320px] overflow-hidden mb-5">
-                <img
-                  src={roomimg}
-                  alt="Solution"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+                    <div className="flex items-center gap-2 text-[#999]">
+                      <div className="w-2 h-2 bg-[#999] rotate-45" />
+                      <span className="text-[22px]">{card.id}</span>
+                    </div>
+                  </div>
 
-              {/* Text */}
-              <p className="text-[15px] leading-[1.8] text-[#222]">
-                The solution was to develop a clean and structured layout where
-                each section acts as a visual composition.
-              </p>
+                  {/* Image */}
+                  <div className="relative overflow-hidden rounded-[22px] h-[280px]">
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      className="w-full h-full object-cover hover:scale-105 transition duration-700"
+                    />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                  </div>
+
+                  {/* Text */}
+                  <p className="mt-5 text-[14px] leading-[1.9] text-[#444]">
+                    {card.text}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* DESKTOP GRID */}
+            <div className="hidden lg:grid grid-cols-2 gap-7">
+              {cards.map((card, index) => (
+                <motion.div
+                  key={card.id}
+                  initial={{ opacity: 0, y: 80 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.15, duration: 0.8 }}
+                  viewport={{ once: true }}
+                  whileHover={{
+                    y: -12,
+                    transition: { duration: 0.3 },
+                  }}
+                  className="
+                    group
+                    relative
+                    overflow-hidden
+                    rounded-[32px]
+                    border border-[#d8d8d8]
+                    bg-white/60
+                    backdrop-blur-xl
+                    p-7
+                    shadow-[0_15px_60px_rgba(0,0,0,0.05)]
+                  "
+                >
+                  {/* Glow */}
+                  <div className="absolute top-0 right-0 w-[180px] h-[180px] bg-white blur-[100px] opacity-60" />
+
+                  {/* Header */}
+                  <div className="relative flex items-center justify-between border-b border-[#dcdcdc] pb-4 mb-6">
+                    <h2 className="text-[32px] text-[#111] font-light">
+                      {card.title}
+                    </h2>
+
+                    <div className="flex items-center gap-2 text-[#a8a8a8]">
+                      <div className="w-2 h-2 bg-[#999] rotate-45" />
+                      <span className="text-[28px]">{card.id}</span>
+                    </div>
+                  </div>
+
+                  {/* Image */}
+                  <div className="relative overflow-hidden rounded-[24px] h-[420px] mb-6">
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      className="
+                        w-full
+                        h-full
+                        object-cover
+                        transition
+                        duration-700
+                        group-hover:scale-105
+                      "
+                    />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                  </div>
+
+                  {/* Text */}
+                  <p className="relative text-[15px] leading-[1.9] text-[#444] max-w-[90%]">
+                    {card.text}
+                  </p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Luxury banner ----------------------------------------------------------------------------------- */}
 
@@ -318,10 +401,7 @@ const Landingpage = () => {
         "
         >
 
-          {/* Logo */}
-          <div className="text-white text-4xl font-semibold">
-            V
-          </div>
+          
 
           {/* Menu */}
           <div className="hidden md:flex flex-col text-white text-[15px] leading-[2]">
@@ -455,7 +535,7 @@ const Landingpage = () => {
         "
         >
           <p>
-            Refinedxxx spaces shaped by Italian
+            Refined spaces shaped by Italian
             aesthetics, natural materials, and
             modern living.
           </p>

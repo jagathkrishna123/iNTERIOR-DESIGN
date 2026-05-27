@@ -1,9 +1,11 @@
-import roomimg from './roomimg.png';
 import gallerimg2 from './gallerimg2.png';
 import gallerimg3 from './gallerimg3.png';
 import gallerimg1 from './gallerimg1.png';
 import gallerimg4 from './gallerimg4.png';
 import gallerimg5 from './gallerimg5.png';
+import roomimg from "../assets/roomimg.png";
+import sketch from "../assets/sketch.jpg";
+import room from "../assets/room.png"
 
 
 export const stats = [
@@ -138,3 +140,20 @@ export const portfolioProjects = [
   }
 ];
 
+
+
+
+export const cards = [
+  {
+    id: "01",
+    title: "Task",
+    image: sketch,
+    text: "The goal of the project was to design a modern, high-end landing page that communicates elegance, clarity, and professionalism.",
+  },
+  {
+    id: "02",
+    title: "Solution",
+    image: room,
+    text: "The solution was to develop a clean and structured layout where each section acts as a visual composition.",
+  },
+];
