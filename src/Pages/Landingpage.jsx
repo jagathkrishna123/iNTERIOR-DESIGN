@@ -57,8 +57,6 @@ const Landingpage = () => {
           {/* Mobile Brand Logo */}
           <div className="md:hidden text-2xl font-serif font-bold italic tracking-widest mt-1">V</div>
 
-          {/* Center Logo (Desktop) */}
-          <div className="hidden md:block absolute left-1/2 -translate-x-1/2 text-3xl font-serif font-bold italic">V</div>
 
           {/* Right Info (Desktop) */}
           <div className="hidden md:flex gap-8 lg:gap-12 text-sm font-light items-center">
@@ -100,7 +98,7 @@ const Landingpage = () => {
         </div>
 
         {/* Small Labels */}
-        <div className="absolute top-[22%] md:top-[33%] left-0 w-full z-20 flex justify-between md:justify-center px-8 md:px-0 md:gap-[15vw] lg:gap-[260px] text-white/80 md:text-white text-[10px] md:text-sm tracking-widest uppercase">
+        <div className="absolute top-[22%] md:top-[33%] left-0 w-full z-20 flex justify-between md:justify-center px-8 md:px-0 md:gap-[15vw] lg:gap-[300px] text-white/80 md:text-white text-[10px] md:text-sm tracking-widest uppercase">
           <p>Interior</p>
           <p className="hidden md:block">Design</p>
           <p>Studio</p>
@@ -115,7 +113,7 @@ const Landingpage = () => {
         >
           {/* Desktop Text */}
           <h1 className="hidden md:block mt-1 text-white font-pop uppercase font-semibold -tracking-tighter leading-none text-[160px] lg:text-[220px] xl:text-[260px]">
-            VELORA
+            VÉLORA
           </h1>
 
           {/* Mobile Text (Stacked) */}
