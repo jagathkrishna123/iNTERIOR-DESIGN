@@ -5,6 +5,7 @@ import Footer from './Pages/Footer'
 import Testimonials from './Pages/Testimonials'
 import Portfolio from './Pages/Portfolio'
 import Lenis from 'lenis'
+import Mysection from './Pages/Mysection'
 
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
       <Gallery/>
       <Testimonials/>
       <Portfolio/>
+      <Mysection/>
       <Footer/>
     </div>
   )

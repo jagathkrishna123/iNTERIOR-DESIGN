@@ -443,7 +443,7 @@ const Landingpage = () => {
             hidden
             md:block
             absolute
-            top-[33%]
+            top-[24%]
             right-[32%]
             z-20
             text-white
@@ -457,7 +457,7 @@ const Landingpage = () => {
         "
         >
           <p>
-            Refined spaces shaped by Italian
+            Refinedxxx spaces shaped by Italian
             aesthetics, natural materials, and
             modern living.
           </p>
