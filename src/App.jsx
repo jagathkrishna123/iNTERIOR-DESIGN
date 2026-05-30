@@ -10,12 +10,31 @@ import Mysection from './Pages/Mysection'
 
 const App = () => {
 
-      useEffect(() => {
+  //     useEffect(() => {
+
+  //   const lenis = new Lenis({
+  //     duration: 1.2,
+  //     smoothWheel: true,
+  //   });
+
+  //   function raf(time) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
+
+  //   requestAnimationFrame(raf);
+
+  // }, []);
+
+    useEffect(() => {
 
     const lenis = new Lenis({
       duration: 1.2,
       smoothWheel: true,
     });
+
+    // IMPORTANT
+    window.lenis = lenis;
 
     function raf(time) {
       lenis.raf(time);
@@ -23,6 +42,10 @@ const App = () => {
     }
 
     requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
 
   }, []);
   return (
