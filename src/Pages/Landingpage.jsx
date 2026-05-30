@@ -17,6 +17,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { cards, stats } from "../assets/assets";
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import { BiSolidRightArrow } from "react-icons/bi";
 
 const Landingpage = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -473,7 +474,7 @@ const Landingpage = () => {
           "
           >
             Book a Consultation
-            <span className="text-lg">→</span>
+<BiSolidRightArrow className="text-gray-600"/>
           </button>
 
           {/* Hamburger Menu (Mobile only) */}
@@ -740,7 +741,7 @@ const Landingpage = () => {
             className="w-full bg-white text-black py-4 px-6 text-[13px] rounded-sm font-medium flex items-center justify-between hover:bg-[#f2f2f2] transition-all duration-300"
           >
             Book a Consultation
-            <span className="text-lg">→</span>
+<BiSolidRightArrow className="text-gray-600"/>
           </button>
         </div>
       </section>
@@ -1106,10 +1107,8 @@ const Landingpage = () => {
                 Book a Consultation
               </span>
 
-              <FaArrowRight
-                size={16}
-                className="transition-transform duration-500 group-hover:translate-x-2"
-              />
+              <BiSolidRightArrow className="text-gray-600 text-xs md:text-md"/>
+
             </motion.button>
           </motion.div>
 
