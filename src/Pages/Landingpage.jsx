@@ -25,7 +25,7 @@ const Landingpage = () => {
 
   return (
     <>
-      <section className="relative w-full h-[100dvh] overflow-hidden bg-black font-inter">
+      <section id="home" className="relative w-full h-[100dvh] overflow-hidden bg-black font-inter">
         {/* Background Image */}
         <img
           src={bgimage2}
@@ -47,9 +47,9 @@ const Landingpage = () => {
         <nav className="absolute top-0 left-0 w-full z-40 px-6 md:px-10 lg:px-16 py-6 md:py-8 flex justify-between items-center text-white">
           {/* Left Links (Desktop) */}
           <div className="hidden md:flex gap-8 lg:gap-12 text-sm font-light">
-            <a href="#" className="hover:text-gray-300 transition tracking-wide">Home</a>
-            <a href="#" className="hover:text-gray-300 transition tracking-wide">Services</a>
-            <a href="#" className="hover:text-gray-300 transition tracking-wide">Portfolio</a>
+            <a href="#home" className="hover:text-gray-300 transition tracking-wide">Home</a>
+            <a href="#services" className="hover:text-gray-300 transition tracking-wide">Services</a>
+            <a href="#portfolio" className="hover:text-gray-300 transition tracking-wide">Portfolio</a>
           </div>
 
           {/* Mobile Brand Logo */}
@@ -58,7 +58,7 @@ const Landingpage = () => {
 
           {/* Right Info (Desktop) */}
           <div className="hidden md:flex gap-8 lg:gap-12 text-sm font-light items-center">
-            <a href="#" className="hover:text-gray-300 transition tracking-wide">Testimonials</a>
+            <a href="#testimonials" className="hover:text-gray-300 transition tracking-wide">Testimonials</a>
             <p className="text-gray-400">©2026</p>
           </div>
 
@@ -84,10 +84,10 @@ const Landingpage = () => {
           </button>
 
           <div className="flex flex-col items-center gap-10 text-white text-2xl font-light tracking-wide">
-            <a href="#" onClick={() => setIsSidebarOpen(false)} className="hover:text-gray-400 transition-colors">Home</a>
-            <a href="#" onClick={() => setIsSidebarOpen(false)} className="hover:text-gray-400 transition-colors">Services</a>
-            <a href="#" onClick={() => setIsSidebarOpen(false)} className="hover:text-gray-400 transition-colors">Portfolio</a>
-            <a href="#" onClick={() => setIsSidebarOpen(false)} className="hover:text-gray-400 transition-colors">Testimonials</a>
+            <a href="#home" onClick={() => setIsSidebarOpen(false)} className="hover:text-gray-400 transition-colors">Home</a>
+            <a href="#services" onClick={() => setIsSidebarOpen(false)} className="hover:text-gray-400 transition-colors">Services</a>
+            <a href="#portfolio" onClick={() => setIsSidebarOpen(false)} className="hover:text-gray-400 transition-colors">Portfolio</a>
+            <a href="#testimonials" onClick={() => setIsSidebarOpen(false)} className="hover:text-gray-400 transition-colors">Testimonials</a>
           </div>
 
           <div className="absolute bottom-10 text-gray-500 text-sm tracking-widest">

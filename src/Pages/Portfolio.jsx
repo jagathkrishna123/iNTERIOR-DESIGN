@@ -26,7 +26,8 @@ const Portfolio = () => {
   };
 
   return (
-    <motion.section 
+    <motion.section
+      id="portfolio"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}

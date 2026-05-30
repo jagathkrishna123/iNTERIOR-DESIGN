@@ -21,7 +21,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="bg-[#efefef] w-full min-h-[500px] md:h-[70vh] max-h-[850px] flex flex-col justify-between py-12 md:py-24 px-6 md:px-12 lg:px-20 overflow-hidden font-['Inter']">
+    <section id='testimonials' className="bg-[#efefef] w-full min-h-[500px] md:h-[70vh] max-h-[850px] flex flex-col justify-between py-12 md:py-24 px-6 md:px-12 lg:px-20 overflow-hidden font-['Inter']">
       
       {/* Top Section */}
       <div className="flex justify-end md:justify-between items-start w-full max-w-[1400px] mx-auto">

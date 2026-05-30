@@ -60,7 +60,7 @@ const Gallery = () => {
   const { scrollXProgress } = useScroll({ container: mobileScrollRef });
 
   return (
-    <section className="w-full bg-[#f8f8f8] font-inter px-4 md:px-10 lg:px-16 py-10 md:py-16 overflow-hidden">
+    <section id="services" className="w-full bg-[#f8f8f8] font-inter px-4 md:px-10 lg:px-16 py-10 md:py-16 overflow-hidden">
 
       {/* TOP */}
       <div className="flex flex-col md:flex-row justify-between items-start gap-10 mb-16 md:mb-24">
