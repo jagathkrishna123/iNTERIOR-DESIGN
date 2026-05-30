@@ -13,23 +13,22 @@ import { FaYoutube } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
-
-
-
 import { motion, AnimatePresence } from "framer-motion";
 
 import { cards, stats } from "../assets/assets";
-import {  IoIosCloseCircleOutline } from "react-icons/io";
+import { IoIosCloseCircleOutline } from "react-icons/io";
 
 const Landingpage = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [openForm, setOpenForm] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
-
   return (
     <>
-      <section id="home" className="relative w-full h-[100dvh] overflow-hidden bg-black font-inter">
+      <section
+        id="home"
+        className="relative w-full h-[100dvh] overflow-hidden bg-black font-inter"
+      >
         {/* Background Image */}
         <img
           src={bgimage2}
@@ -51,18 +50,39 @@ const Landingpage = () => {
         <nav className="absolute top-0 left-0 w-full z-40 px-6 md:px-10 lg:px-16 py-6 md:py-8 flex justify-between items-center text-white">
           {/* Left Links (Desktop) */}
           <div className="hidden md:flex gap-8 lg:gap-12 text-sm font-light">
-            <a href="#home" className="hover:text-gray-300 transition tracking-wide">Home</a>
-            <a href="#services" className="hover:text-gray-300 transition tracking-wide">Services</a>
-            <a href="#portfolio" className="hover:text-gray-300 transition tracking-wide">Portfolio</a>
+            <a
+              href="#home"
+              className="hover:text-gray-300 transition tracking-wide"
+            >
+              Home
+            </a>
+            <a
+              href="#services"
+              className="hover:text-gray-300 transition tracking-wide"
+            >
+              Services
+            </a>
+            <a
+              href="#portfolio"
+              className="hover:text-gray-300 transition tracking-wide"
+            >
+              Portfolio
+            </a>
           </div>
 
           {/* Mobile Brand Logo */}
-          <div className="md:hidden text-2xl font-serif font-bold italic tracking-widest mt-1">V</div>
-
+          <div className="md:hidden text-2xl font-serif font-bold italic tracking-widest mt-1">
+            V
+          </div>
 
           {/* Right Info (Desktop) */}
           <div className="hidden md:flex gap-8 lg:gap-12 text-sm font-light items-center">
-            <a href="#testimonials" className="hover:text-gray-300 transition tracking-wide">Testimonials</a>
+            <a
+              href="#testimonials"
+              className="hover:text-gray-300 transition tracking-wide"
+            >
+              Testimonials
+            </a>
             <p className="text-gray-400">©2026</p>
           </div>
 
@@ -77,8 +97,9 @@ const Landingpage = () => {
 
         {/* Mobile Sidebar */}
         <div
-          className={`fixed inset-0 bg-[#1a1a1a] z-50 transition-transform duration-500 ease-in-out flex flex-col items-center justify-center ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
-            }`}
+          className={`fixed inset-0 bg-[#1a1a1a] z-50 transition-transform duration-500 ease-in-out flex flex-col items-center justify-center ${
+            isSidebarOpen ? "translate-x-0" : "translate-x-full"
+          }`}
         >
           <button
             className="absolute top-8 right-6 text-3xl text-white"
@@ -88,10 +109,34 @@ const Landingpage = () => {
           </button>
 
           <div className="flex flex-col items-center gap-10 text-white text-2xl font-light tracking-wide">
-            <a href="#home" onClick={() => setIsSidebarOpen(false)} className="hover:text-gray-400 transition-colors">Home</a>
-            <a href="#services" onClick={() => setIsSidebarOpen(false)} className="hover:text-gray-400 transition-colors">Services</a>
-            <a href="#portfolio" onClick={() => setIsSidebarOpen(false)} className="hover:text-gray-400 transition-colors">Portfolio</a>
-            <a href="#testimonials" onClick={() => setIsSidebarOpen(false)} className="hover:text-gray-400 transition-colors">Testimonials</a>
+            <a
+              href="#home"
+              onClick={() => setIsSidebarOpen(false)}
+              className="hover:text-gray-400 transition-colors"
+            >
+              Home
+            </a>
+            <a
+              href="#services"
+              onClick={() => setIsSidebarOpen(false)}
+              className="hover:text-gray-400 transition-colors"
+            >
+              Services
+            </a>
+            <a
+              href="#portfolio"
+              onClick={() => setIsSidebarOpen(false)}
+              className="hover:text-gray-400 transition-colors"
+            >
+              Portfolio
+            </a>
+            <a
+              href="#testimonials"
+              onClick={() => setIsSidebarOpen(false)}
+              className="hover:text-gray-400 transition-colors"
+            >
+              Testimonials
+            </a>
           </div>
 
           <div className="absolute bottom-10 text-gray-500 text-sm tracking-widest">
@@ -163,7 +208,6 @@ const Landingpage = () => {
     scale-110 md:scale-100
   "
         />
-
       </section>
 
       {/* ABOUT SECTION -------------------------------------------------------*/}
@@ -244,7 +288,9 @@ const Landingpage = () => {
 
                       <div className="flex items-center gap-2 text-[#999]">
                         <div className="w-2 h-2 bg-[#999] rotate-45" />
-                        <span className="md:text-[22px] text-[16px]">{card.id}</span>
+                        <span className="md:text-[22px] text-[16px]">
+                          {card.id}
+                        </span>
                       </div>
                     </div>
 
@@ -361,11 +407,9 @@ const Landingpage = () => {
         </div>
       </section>
 
-
       {/* HERO SECTION 2 -------------------------------------------------------------------------- */}
 
       <section className="relative w-full h-screen overflow-hidden bg-black font-['Inter']">
-
         {/* Background Image */}
         <img
           src={bgimage2}
@@ -400,9 +444,6 @@ const Landingpage = () => {
           justify-between
         "
         >
-
-
-
           {/* Menu */}
           <div className="hidden md:flex flex-col text-white text-[15px] leading-[2]">
             <p>About</p>
@@ -470,7 +511,8 @@ const Landingpage = () => {
           <p className="font-light tracking-wide">
             Every <span className="italic font-bold">line</span>, every
             <br />
-            <span className="italic font-bold">volume</span>, every <span className="italic font-bold">detail</span>
+            <span className="italic font-bold">volume</span>, every{" "}
+            <span className="italic font-bold">detail</span>
             <br />
             exists for a reason.
           </p>
@@ -536,8 +578,7 @@ const Landingpage = () => {
         "
         >
           <p>
-            Refined spaces shaped by Italian
-            aesthetics, natural materials, and
+            Refined spaces shaped by Italian aesthetics, natural materials, and
             modern living.
           </p>
         </motion.div>
@@ -691,29 +732,27 @@ const Landingpage = () => {
         {/* Mobile Bottom Info & Button */}
         <div className="absolute bottom-6 left-6 right-6 z-30 md:hidden flex flex-col gap-4">
           <p className="text-white text-[13px] leading-[1.5] font-light max-w-[255px] font-pop">
-            Refined spaces shaped by Italian aesthetics, natural materials, and modern living.
+            Refined spaces shaped by Italian aesthetics, natural materials, and
+            modern living.
           </p>
-          <button 
-          onClick={() => setOpenModal(true)}
-          className="w-full bg-white text-black py-4 px-6 text-[13px] rounded-sm font-medium flex items-center justify-between hover:bg-[#f2f2f2] transition-all duration-300">
+          <button
+            onClick={() => setOpenModal(true)}
+            className="w-full bg-white text-black py-4 px-6 text-[13px] rounded-sm font-medium flex items-center justify-between hover:bg-[#f2f2f2] transition-all duration-300"
+          >
             Book a Consultation
             <span className="text-lg">→</span>
           </button>
         </div>
-
       </section>
 
-       <AnimatePresence>
-
+      <AnimatePresence>
         {openModal && (
-
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center px-4"
           >
-
             {/* Modal */}
             <motion.div
               initial={{ y: 80, opacity: 0, scale: 0.95 }}
@@ -725,14 +764,13 @@ const Landingpage = () => {
               }}
               className="w-full max-w-[520px] font-outfit bg-[#1F2123] border border-white/10 p-7 sm:p-10 relative rounded-xs"
             >
-
               {/* Close Button */}
               <button
-  onClick={() => setOpenModal(false)}
-  className="absolute top-5 right-5 text-white/60 hover:text-white transition"
->
-  <IoIosCloseCircleOutline className="text-[23px] md:text-[28px]" />
-</button>
+                onClick={() => setOpenModal(false)}
+                className="absolute top-5 right-5 text-white/60 hover:text-white transition"
+              >
+                <IoIosCloseCircleOutline className="text-[23px] md:text-[28px]" />
+              </button>
 
               <h2 className="text-[30px] sm:text-[40px] font-light text-gray-400 tracking-[-0.03em] mb-2">
                 Book a Consultation
@@ -744,7 +782,6 @@ const Landingpage = () => {
 
               {/* Form */}
               <form className="space-y-5">
-
                 <input
                   type="text"
                   placeholder="Full Name"
@@ -776,7 +813,6 @@ const Landingpage = () => {
                 >
                   Submit Request
                 </motion.button>
-
               </form>
             </motion.div>
           </motion.div>
@@ -786,13 +822,10 @@ const Landingpage = () => {
       {/* grey section ....................................................*/}
 
       <section className="w-full bg-[#242628] text-white font-['Inter'] px-4 sm:px-6 md:px-10 lg:px-16 py-12 md:py-20 overflow-hidden">
-
         {/* Top Area */}
         <div className="flex flex-col lg:flex-row justify-between gap-10 md:gap-16 mb-14 md:mb-24">
-
           {/* Left Side */}
           <div className="flex-1">
-
             {/* Small Label */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -841,9 +874,7 @@ const Landingpage = () => {
               <span className="italic font-semibold">
                 interior design studio
               </span>{" "}
-              focused on creating calm,
-              sophisticated spaces
-              for modern living.
+              focused on creating calm, sophisticated spaces for modern living.
             </motion.h2>
           </div>
 
@@ -873,12 +904,10 @@ const Landingpage = () => {
               composition to design interiors that feel effortless and refined.
             </p>
           </motion.div>
-
         </div>
 
         {/* Stats */}
         <div className="grid grid-cols-2 lg:grid-cols-4 border-t border-white/10 lg:border-none">
-
           {stats.map((item, index) => (
             <motion.div
               key={index}
@@ -906,7 +935,6 @@ const Landingpage = () => {
           justify-between
         "
             >
-
               {/* Top Label */}
               <p className="text-[13px] md:text-[18px] text-[#d7d7d7]">
                 {item.title}
@@ -930,43 +958,37 @@ const Landingpage = () => {
               <p className="text-[13px] md:text-[18px] text-[#8f8f8f] leading-[1.4]">
                 {item.description}
               </p>
-
             </motion.div>
           ))}
-
         </div>
-
       </section>
 
       {/* Explore section-------------------------------------------------------------------------- */}
 
       <section className="w-full h-screen overflow-hidden font-['Inter'] relative bg-black">
-
         {/* Background Image */}
         <motion.div
-  initial={{ scale: 1.1, opacity: 0 }}
-  animate={{ scale: 1, opacity: 1 }}
-  transition={{ duration: 1.5, ease: "easeOut" }}
-  className="
+          initial={{ scale: 1.1, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          className="
     absolute inset-0
     bg-cover
     bg-[position:29%_center]
     md:bg-center
   "
-  style={{
-    backgroundImage: `url(${explore})`,
-  }}
-/>
+          style={{
+            backgroundImage: `url(${explore})`,
+          }}
+        />
 
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/55"></div>
 
         {/* Main Content */}
         <div className="relative z-10 h-full flex flex-col justify-between px-8 md:px-14 lg:px-16 py-10">
-
           {/* Top Content */}
           <div className="flex justify-between items-start w-full">
-
             {/* Heading */}
             <motion.div
               initial={{ opacity: 0, y: 70 }}
@@ -1001,7 +1023,6 @@ const Landingpage = () => {
               className="mt-10 hidden md:block"
             >
               <button className="group border border-white/60 w-[310px] h-[60px] text-white flex items-center justify-center gap-8 hover:bg-white hover:text-black transition-all duration-500">
-
                 <span className="text-[15px] tracking-wide">
                   Explore Velora
                 </span>
@@ -1015,7 +1036,6 @@ const Landingpage = () => {
 
           {/* Bottom Content */}
           <div className="w-full">
-
             {/* Bottom Left Text */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -1055,10 +1075,8 @@ const Landingpage = () => {
 
       {/* SECTION....................................................................... */}
       <section className="w-full bg-[#242628] text-white font-['Inter'] px-5 sm:px-8 md:px-10 lg:px-14 pt-10 md:pt-14 pb-5 overflow-hidden">
-
         {/* Top Content */}
         <div className="flex flex-col lg:flex-row justify-between gap-14 md:gap-20 mb-16 md:mb-24">
-
           {/* Left Side */}
           <motion.div
             initial={{ opacity: 0, y: 80 }}
@@ -1079,7 +1097,7 @@ const Landingpage = () => {
 
             {/* Button */}
             <motion.button
-               onClick={() => setOpenForm(true)}
+              onClick={() => setOpenForm(true)}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
               className="group mt-8 bg-[#F2F2F2] text-black w-[240px] sm:w-[270px] h-[54px] flex items-center cursor-pointer justify-center gap-5 hover:bg-white transition-all duration-500"
@@ -1103,10 +1121,8 @@ const Landingpage = () => {
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
             className="flex flex-col w-full max-w-[520px]"
           >
-
             {/* Columns */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8">
-
               {/* Menu */}
               <div>
                 <p className="text-white/30 text-xs uppercase tracking-[0.15em] mb-5">
@@ -1114,23 +1130,27 @@ const Landingpage = () => {
                 </p>
 
                 <ul className="space-y-2 text-[15px] sm:text-[16px] font-light">
-                  {["Home", "About", "Services", "Portfolio", "Testimonials"].map(
-                    (item, index) => (
-                      <motion.li
-                        key={item}
-                        initial={{ opacity: 0, y: 15 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{
-                          duration: 0.5,
-                          delay: index * 0.08,
-                        }}
-                        className="hover:text-white/70 cursor-pointer transition"
-                      >
-                        {item}
-                      </motion.li>
-                    )
-                  )}
+                  {[
+                    "Home",
+                    "About",
+                    "Services",
+                    "Portfolio",
+                    "Testimonials",
+                  ].map((item, index) => (
+                    <motion.li
+                      key={item}
+                      initial={{ opacity: 0, y: 15 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.5,
+                        delay: index * 0.08,
+                      }}
+                      className="hover:text-white/70 cursor-pointer transition"
+                    >
+                      {item}
+                    </motion.li>
+                  ))}
                 </ul>
               </div>
 
@@ -1170,7 +1190,6 @@ const Landingpage = () => {
 
             {/* Studio Name + Socials */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-
               <motion.h3
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1183,7 +1202,6 @@ const Landingpage = () => {
 
               {/* Social Icons */}
               <div className="flex items-center gap-2">
-
                 {[
                   <FaXTwitter size={15} />,
                   <AiFillInstagram size={15} />,
@@ -1246,17 +1264,14 @@ const Landingpage = () => {
           </div>
         </motion.div>
       </section>
-       <AnimatePresence>
-
+      <AnimatePresence>
         {openForm && (
-
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center px-4"
           >
-
             {/* Modal */}
             <motion.div
               initial={{ y: 80, opacity: 0, scale: 0.95 }}
@@ -1268,14 +1283,12 @@ const Landingpage = () => {
               }}
               className="w-full max-w-[520px] font-outfit bg-[#1F2123] border border-white/10 p-7 sm:p-10 relative rounded-xs"
             >
-
               {/* Close Button */}
               <button
-                onClick={() => setOpenForm(false)}
-                className="absolute top-5 right-5 text-white/60 hover:text-white text-lg md:text-xl transition"
+                onClick={() => setOpenModal(false)}
+                className="absolute top-5 right-5 text-white/60 hover:text-white transition"
               >
-                <IoIosCloseCircleOutline/>
-
+                <IoIosCloseCircleOutline className="text-[23px] md:text-[28px]" />
               </button>
 
               <h2 className="text-[30px] sm:text-[40px] font-light text-gray-400 tracking-[-0.03em] mb-2">
@@ -1288,7 +1301,6 @@ const Landingpage = () => {
 
               {/* Form */}
               <form className="space-y-5">
-
                 <input
                   type="text"
                   placeholder="Full Name"
@@ -1320,13 +1332,11 @@ const Landingpage = () => {
                 >
                   Submit Request
                 </motion.button>
-
               </form>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
-
     </>
   );
 };
