@@ -728,12 +728,11 @@ const Landingpage = () => {
 
               {/* Close Button */}
               <button
-                onClick={() => setOpenModal(false)}
-                className="absolute top-5 right-5 text-white/60 hover:text-white text-lg md:text-xl transition"
-              >
-                <IoIosCloseCircleOutline/>
-
-              </button>
+  onClick={() => setOpenModal(false)}
+  className="absolute top-5 right-5 text-white/60 hover:text-white transition"
+>
+  <IoIosCloseCircleOutline className="text-[23px] md:text-[28px]" />
+</button>
 
               <h2 className="text-[30px] sm:text-[40px] font-light text-gray-400 tracking-[-0.03em] mb-2">
                 Book a Consultation
