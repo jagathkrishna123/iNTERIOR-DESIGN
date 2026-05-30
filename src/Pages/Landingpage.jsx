@@ -1285,7 +1285,7 @@ const Landingpage = () => {
             >
               {/* Close Button */}
               <button
-                onClick={() => setOpenModal(false)}
+                onClick={() => setOpenForm(false)}
                 className="absolute top-5 right-5 text-white/60 hover:text-white transition"
               >
                 <IoIosCloseCircleOutline className="text-[23px] md:text-[28px]" />
