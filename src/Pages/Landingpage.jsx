@@ -16,12 +16,15 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 
 
+import { motion, AnimatePresence } from "framer-motion";
 
-import { motion } from "framer-motion";
 import { cards, stats } from "../assets/assets";
+import {  IoIosCloseCircleOutline } from "react-icons/io";
 
 const Landingpage = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [openForm, setOpenForm] = useState(false);
+
 
   return (
     <>
@@ -987,9 +990,10 @@ const Landingpage = () => {
 
             {/* Button */}
             <motion.button
+               onClick={() => setOpenForm(true)}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
-              className="group mt-8 bg-[#F2F2F2] text-black w-[240px] sm:w-[270px] h-[54px] flex items-center justify-center gap-5 hover:bg-white transition-all duration-500"
+              className="group mt-8 bg-[#F2F2F2] text-black w-[240px] sm:w-[270px] h-[54px] flex items-center cursor-pointer justify-center gap-5 hover:bg-white transition-all duration-500"
             >
               <span className="text-[13px] sm:text-[14px] tracking-wide">
                 Book a Consultation
@@ -1153,6 +1157,86 @@ const Landingpage = () => {
           </div>
         </motion.div>
       </section>
+       <AnimatePresence>
+
+        {openForm && (
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center px-4"
+          >
+
+            {/* Modal */}
+            <motion.div
+              initial={{ y: 80, opacity: 0, scale: 0.95 }}
+              animate={{ y: 0, opacity: 1, scale: 1 }}
+              exit={{ y: 40, opacity: 0, scale: 0.95 }}
+              transition={{
+                duration: 0.45,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="w-full max-w-[520px] font-outfit bg-[#1F2123] border border-white/10 p-7 sm:p-10 relative rounded-xs"
+            >
+
+              {/* Close Button */}
+              <button
+                onClick={() => setOpenForm(false)}
+                className="absolute top-5 right-5 text-white/60 hover:text-white text-lg md:text-xl transition"
+              >
+                <IoIosCloseCircleOutline/>
+
+              </button>
+
+              <h2 className="text-[30px] sm:text-[40px] font-light text-gray-400 tracking-[-0.03em] mb-2">
+                Book a Consultation
+              </h2>
+
+              <p className="text-white/50 text-sm mb-8">
+                Tell us about your dream space.
+              </p>
+
+              {/* Form */}
+              <form className="space-y-5">
+
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  className="w-full h-[54px] text-gray-500 bg-transparent border border-white/10 px-4 text-sm outline-none focus:border-white/40 transition"
+                />
+
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  className="w-full h-[54px] text-gray-500 bg-transparent border border-white/10 px-4 text-sm outline-none focus:border-white/40 transition"
+                />
+
+                <input
+                  type="text"
+                  placeholder="Project Type"
+                  className="w-full h-[54px] text-gray-500 bg-transparent border border-white/10 px-4 text-sm outline-none focus:border-white/40 transition"
+                />
+
+                <textarea
+                  rows="5"
+                  placeholder="Tell us more about your project..."
+                  className="w-full text-gray-500 bg-transparent border border-white/10 p-4 text-sm outline-none resize-none focus:border-white/40 transition"
+                />
+
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full h-[56px] bg-slate-300 text-black text-sm tracking-wide hover:bg-[#EAEAEA] transition rounded-xs"
+                >
+                  Submit Request
+                </motion.button>
+
+              </form>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
     </>
   );
