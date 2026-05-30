@@ -945,14 +945,19 @@ const Landingpage = () => {
 
         {/* Background Image */}
         <motion.div
-          initial={{ scale: 1.1, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${explore})`,
-          }}
-        />
+  initial={{ scale: 1.1, opacity: 0 }}
+  animate={{ scale: 1, opacity: 1 }}
+  transition={{ duration: 1.5, ease: "easeOut" }}
+  className="
+    absolute inset-0
+    bg-cover
+    bg-[position:29%_center]
+    md:bg-center
+  "
+  style={{
+    backgroundImage: `url(${explore})`,
+  }}
+/>
 
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/55"></div>
