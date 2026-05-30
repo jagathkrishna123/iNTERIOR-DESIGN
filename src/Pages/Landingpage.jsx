@@ -763,7 +763,7 @@ const Landingpage = () => {
                 duration: 0.45,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="w-full max-w-[520px] font-outfit bg-[#1F2123] border border-white/10 p-7 sm:p-10 relative rounded-xs"
+              className="w-full max-w-[520px] font-outfit bg-[#1F2123] border border-white/10 p-7 sm:p-10 relative rounded-sm"
             >
               {/* Close Button */}
               <button
@@ -786,25 +786,25 @@ const Landingpage = () => {
                 <input
                   type="text"
                   placeholder="Full Name"
-                  className="w-full h-[54px] text-gray-500 bg-transparent border border-white/10 px-4 text-sm outline-none focus:border-white/40 transition"
+                  className="w-full h-[54px] text-gray-500 rounded-sm bg-transparent border border-white/10 px-4 text-sm outline-none focus:border-white/40 transition"
                 />
 
                 <input
                   type="email"
                   placeholder="Email Address"
-                  className="w-full h-[54px] text-gray-500 bg-transparent border border-white/10 px-4 text-sm outline-none focus:border-white/40 transition"
+                  className="w-full h-[54px] text-gray-500 bg-transparent border border-white/10 px-4 text-sm outline-none focus:border-white/40 transition rounded-sm"
                 />
 
                 <input
                   type="text"
                   placeholder="Project Type"
-                  className="w-full h-[54px] text-gray-500 bg-transparent border border-white/10 px-4 text-sm outline-none focus:border-white/40 transition"
+                  className="w-full h-[54px] text-gray-500 bg-transparent border border-white/10 px-4 text-sm outline-none focus:border-white/40 transition rounded-sm"
                 />
 
                 <textarea
                   rows="5"
                   placeholder="Tell us more about your project..."
-                  className="w-full text-gray-500 bg-transparent border border-white/10 p-4 text-sm outline-none resize-none focus:border-white/40 transition"
+                  className="w-full text-gray-500 bg-transparent border border-white/10 p-4 text-sm outline-none resize-none focus:border-white/40 transition rounded-sm"
                 />
 
                 <motion.button
@@ -1280,7 +1280,7 @@ const Landingpage = () => {
                 duration: 0.45,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="w-full max-w-[520px] font-outfit bg-[#1F2123] border border-white/10 p-7 sm:p-10 relative rounded-xs"
+              className="w-full max-w-[520px] font-outfit bg-[#1F2123] border border-white/10 p-7 sm:p-10 relative rounded-sm"
             >
               {/* Close Button */}
               <button
@@ -1303,25 +1303,25 @@ const Landingpage = () => {
                 <input
                   type="text"
                   placeholder="Full Name"
-                  className="w-full h-[54px] text-gray-500 bg-transparent border border-white/10 px-4 text-sm outline-none focus:border-white/40 transition"
+                  className="w-full h-[54px] text-gray-500 bg-transparent border border-white/10 px-4 text-sm outline-none focus:border-white/40 transition rounded-sm"
                 />
 
                 <input
                   type="email"
                   placeholder="Email Address"
-                  className="w-full h-[54px] text-gray-500 bg-transparent border border-white/10 px-4 text-sm outline-none focus:border-white/40 transition"
+                  className="w-full h-[54px] text-gray-500 bg-transparent border border-white/10 px-4 text-sm outline-none focus:border-white/40 transition rounded-sm"
                 />
 
                 <input
                   type="text"
                   placeholder="Project Type"
-                  className="w-full h-[54px] text-gray-500 bg-transparent border border-white/10 px-4 text-sm outline-none focus:border-white/40 transition"
+                  className="w-full h-[54px] text-gray-500 bg-transparent border border-white/10 px-4 text-sm outline-none focus:border-white/40 transition rounded-sm"
                 />
 
                 <textarea
                   rows="5"
                   placeholder="Tell us more about your project..."
-                  className="w-full text-gray-500 bg-transparent border border-white/10 p-4 text-sm outline-none resize-none focus:border-white/40 transition"
+                  className="w-full text-gray-500 bg-transparent border border-white/10 p-4 text-sm outline-none resize-none focus:border-white/40 transition rounded-sm"
                 />
 
                 <motion.button
