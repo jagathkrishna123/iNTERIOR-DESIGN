@@ -278,7 +278,7 @@ const ProjectModal = ({ project, onClose }) => {
         </div>
 
         {/* Right — form */}
-        <div className="flex-1 flex flex-col min-h-0 overflow-y-auto" onWheel={stopPropagation} onTouchMove={stopPropagation}>
+        <div className="flex-1 flex flex-col min-h-0 overflow-y-auto scrollbar-hide" onWheel={stopPropagation} onTouchMove={stopPropagation}>
 
           {/* Header bar */}
           <div className="sticky top-0 z-10 flex items-center justify-between px-8 pt-8 pb-6 border-b border-[#2a2a2a] flex-shrink-0 bg-[#1a1a1a]">
