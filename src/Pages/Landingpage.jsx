@@ -446,13 +446,13 @@ const Landingpage = () => {
         "
         >
           {/* Menu */}
-          <div className="hidden md:flex flex-col text-white text-[15px] leading-[2]">
+          {/* <div className="hidden md:flex flex-col text-white text-[15px] leading-[2]">
             <p>About</p>
             <p>Services</p>
             <p>Portfolio</p>
             <p>Testimonials</p>
             <p>Contact</p>
-          </div>
+          </div> */}
 
           {/* Button (Desktop only) */}
           <button
