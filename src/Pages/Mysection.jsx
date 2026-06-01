@@ -118,9 +118,12 @@ const Mysection = () => {
     className="transition-transform duration-300 group-hover:-translate-x-1"
   />
 
-  <span className="flex-1 text-center text-sm sm:text-base">
-    Back to Home
-  </span>
+  <a
+  href="#home"
+  className="flex-1 text-center text-sm sm:text-base cursor-pointer"
+>
+  Back to Home
+</a>
 </motion.button>
           </motion.div>
         </div>
